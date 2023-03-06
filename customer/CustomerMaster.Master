@@ -1,0 +1,181 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CustomerMaster.master.cs" Inherits="ghar_ka_khana.customer.CustomerMaster" %>
+
+<!DOCTYPE html>
+
+
+<html>
+<head runat="server">
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ghar Ka Khana</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Favicons
+    ================================================== -->
+<link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="assets/img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="assets/img/apple-touch-icon-114x114.png">
+
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css"  href="assets/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome/assets/css/font-awesome.css">
+
+<!-- Stylesheet
+    ================================================== -->
+<link rel="stylesheet" type="text/css"  href="assets/css/style.css">
+<link rel="stylesheet" type="text/css" href="assets/css/nivo-lightbox/nivo-lightbox.css">
+<link rel="stylesheet" type="text/css" href="assets/css/nivo-lightbox/default.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+    <body>
+        <form id="form1" runat="server">
+        <!-- Navigation-->
+        <nav id="menu" class="navbar navbar-default navbar-fixed-top">
+          <div class="container"> 
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+              <a class="navbar-brand page-scroll" href="#page-top">Ghar Ka Khana</a> 
+
+            </div>
+    
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#portfolio" class="page-scroll">Gallery</a></li>
+                    <li><a href="#restaurant-menu" class="page-scroll">Menu</a></li>
+                    <li><a href="#about" class="page-scroll">About</a></li>      
+                    <li><a href="../ContactUs.aspx" class="page-scroll">Contact</a></li>
+                   <%-- <li><a href="#" class="page-scroll"><img src="assets/img/cart_icon.svg.png" height="24" width="30" /></a></li>--%>
+                    <li><a href="../Logout.aspx" class="page-scroll">Logout</a></li>
+                    <li><a href="../Products.aspx" class="page-scroll">Subscription</a></li>
+                    <li><a href="../MyProfile.aspx" class="page-scroll"><img src="../assets/img/profile.jpg" height="24" width="30" /></a></li>
+                    
+                 <%--   <li><a href="#about" class="page-scroll">wishlist</a></li>--%>
+                    <%--<li><a href="#book-a-table" class="book-a-table-btn scrollto">Book a table</a></li>--%>
+
+                    <%-- dropdown
+                    <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>--%>
+                       
+                    <%--<asp:HyperLink ID="HyperLink3" runat="server" class="dropdown-item" NavigateUrl="~/Login.aspx">Login</asp:HyperLink>
+                        </asp:PlaceHolder>
+                        
+                        <asp:PlaceHolder ID="Placelogout" runat="server"  >
+                            <a class="dropdown-item" >Welcome <%=HttpContext.Current.Session["first_name"] %></a>
+                            <asp:HyperLink ID="HyperLink4" runat="server" class="dropdown-item" NavigateUrl="~/Logout.aspx">Logout</asp:HyperLink>
+                        </asp:PlaceHolder>--%>
+
+                </ul>
+                <%-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="nav navbar-nav navbar-right">
+                <a href="home.aspx" class="page-scroll">Home</a>
+                <a href="about.html" class="page-scroll">About</a>
+                <a href="service.html" class="page-scroll">Service</a>
+                <a href="product.html" class="page-scroll">Product</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Account</a>
+                    <div class="dropdown-menu m-0">
+                        <asp:PlaceHolder ID="Placelogin" runat="server">
+                        <asp:HyperLink ID="HyperLink2" runat="server" class="dropdown-item" NavigateUrl="~/Registration.aspx">Register</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink3" runat="server" class="dropdown-item" NavigateUrl="~/Login.aspx">Login</asp:HyperLink>
+                        </asp:PlaceHolder>
+                        
+                        <asp:PlaceHolder ID="Placelogout" runat="server"  >
+                            <a class="dropdown-item" >Welcome <%=HttpContext.Current.Session["first_name"] %></a>
+                            <asp:HyperLink ID="HyperLink4" runat="server" class="dropdown-item" NavigateUrl="~/Logout.aspx">Logout</asp:HyperLink>
+                        </asp:PlaceHolder>
+
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5">Contact <i class="bi bi-arrow-right"></i></a>
+            </div>--%>
+            </div>
+
+
+            <!-- /.navbar-collapse --> 
+          </div>
+        </nav> 
+              
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </form>
+
+        <!--footer start-->
+        <div id="footer">
+          <div class="container text-Left">
+            <div class="col-md-4">
+              <h3>Address</h3>
+              <div class="contact-item">
+                <p>Amravati Complex,</p>
+                <p>Near Plaza Chowk,</p>
+                <p>Lalpur.</p>
+                <%--<p>Phone:+91  9123164498</p>
+                <p>Email: gharkakhana23@gmail.com</p>--%>
+              </div>
+            </div>
+            <%--<div class="col-md-3">
+              <h3>Useful Links</h3>
+              <div class="contact-item">
+                <a href="Home.aspx"><p>Home</p></a>
+                <a href="#about" class="page-scroll"><p>About us</p></a>                
+                <a href="#restaurant-menu" class="page-scroll"><p>Menu</p></a>
+              </div>
+            </div>--%>
+            <div class="col-md-4">
+              <h3>About Us</h3>
+              <div class="contact-item">
+                <a href="../ContactUs.aspx" class="page-scroll"><p>Contact Us</p></a>
+                <a href="#"><p>Book a Table</p></a>
+                <a href="../FAQ.aspx"><p>FAQ</p></a>
+                <a href="../TermsOfUse.aspx"><p>Terms of Use</p></a>
+                <a href="../PrivacyPolicy.aspx"><p>Privacy policy</p></a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <h3>Contact Info</h3>
+              <div class="contact-item">
+                <p>Phone:+91  9123164498</p>
+                <p>Email: gharkakhana23@gmail.com</p>
+              </div>
+            </div>
+          </div>
+         
+    </div>
+        <!--footer close-->
+            <script type="text/javascript" src="assets/js/jquery.1.11.1.js"></script> 
+            <script type="text/javascript" src="assets/js/bootstrap.js"></script> 
+            <script type="text/javascript" src="assets/js/SmoothScroll.js"></script> 
+            <script type="text/javascript" src="assets/js/nivo-lightbox.js"></script> 
+            <script type="text/javascript" src="assets/js/jquery.isotope.js"></script> 
+            <script type="text/javascript" src="assets/js/jqBootstrapValidation.js"></script> 
+            <script type="text/javascript" src="assets/js/contact_me.js"></script> 
+            <script type="text/javascript" src="assets/js/main.js"></script>
+    </body>
+</html>
+
