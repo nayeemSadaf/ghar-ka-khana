@@ -82,6 +82,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <asp:Button ID="btnBook" runat="server" class="btn btn-success" Width="200px" Height="40px" Text="Book" OnClick="btnBook_Click" />
+                            <br/>
                         </div>
                     </div>
                 </div>
